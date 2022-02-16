@@ -2,17 +2,17 @@
                         /* FONTS */
 /*-------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap");
 
 /*-------------------------------------------------------------*/
                         /* HEADER */
 /*-------------------------------------------------------------*/
 
 header h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 48px;
-  color: #31A5AC;
+  color: #31a5ac;
   text-align: center;
 }
 
@@ -20,52 +20,52 @@ header h1 {
                         /* MAIN */
 /*-------------------------------------------------------------*/
 
-.main-field {
+.main-section {
   overflow: hidden;
 }
 
-.calculation-field {
-  background-color: #F8F8F8;
+.calculation-section {
+  background-color: #f8f8f8;
 }
 
-.calculation-field h1 {
-  font-family: 'Roboto', sans-serif;
+.calculation-section h1 {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 22px;
 }
 
-.calculation-field p {
-  font-family: 'Roboto', sans-serif;
+.calculation-section p {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
 input {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   outline: 0;
-  border: 1px solid #DCDCDC;
-  background-color: #DCDCDC;
+  border: 1px solid #dcdcdc;
+  background-color: #dcdcdc;
 }
 
 .save input {
   width: 100px;
   height: 42px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   outline: 0;
-  border: 1px solid #DCDCDC;
-  background-color: #DCDCDC;
+  border: 1px solid #dcdcdc;
+  background-color: #dcdcdc;
 }
 
 .btn-style {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #ffffff;
-  background-color: #59A5FF;
+  background-color: #59a5ff;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   outline: 0;
