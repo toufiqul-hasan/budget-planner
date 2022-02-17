@@ -14,21 +14,25 @@ document.getElementById("calculate-button").addEventListener("click", function (
     // Error Handling
     if (isNaN(incomeAmount) || incomeAmount < 0) {
       alert("Please enter only positive number!");
+      return;
     }
     const foodCostAmount = getInputValue("food-cost");
     // Error Handling
     if (isNaN(foodCostAmount) || foodCostAmount < 0) {
       alert("Please enter only positive number!");
+      return;
     }
     const rentCostAmount = getInputValue("rent-cost");
     // Error Handling
     if (isNaN(rentCostAmount) || rentCostAmount < 0) {
       alert("Please enter only positive number!");
+      return;
     }
     const clothesCostAmount = getInputValue("clothes-cost");
     // Error Handling
     if (isNaN(clothesCostAmount) || clothesCostAmount < 0) {
       alert("Please enter only positive number!");
+      return;
     }
     // Cost Calculation
     const totalCost = foodCostAmount + rentCostAmount + clothesCostAmount;
@@ -37,6 +41,7 @@ document.getElementById("calculate-button").addEventListener("click", function (
     // Error Handling
     if (incomeAmount < totalCost) {
       alert("You spend more than you earn!");
+      return;
     }
     // Update Total Expenses
     const expensesTotal = document.getElementById("total-expenses");
@@ -50,28 +55,33 @@ document.getElementById("calculate-button").addEventListener("click", function (
     balanceTotal.innerText = totalBalance;
     // Handle Save Button
     document.getElementById("save-button").addEventListener("click", function () {
-      // Getting Input Value
-      const savingsInput = getInputValue("savings-input");
-      // Error Handling
-      if (isNaN(savingsInput) || savingsInput < 0) {
-        alert("Please enter only positive number!");
-      }
-      // Saving Calculation
-      const saving = (incomeAmount * savingsInput) / 100;
-      // Remaining Balance Calculation
-      const remainingBalance = balance - saving;
-      if (remainingBalance < saving) {
-        alert("You don't have enough money!");
-      }
-      // Update Saving Amount
-      const savingAmount = document.getElementById("saving-amount");
-      const savingAmountText = savingAmount.innerText;
-      const totalSavingAmount = parseFloat(savingAmountText) + saving;
-      savingAmount.innerText = totalSavingAmount;
-      // Update Remaining Balance
-      const remainingBalanceAmount = document.getElementById("remaining-balance");
-      const remainingBalanceAmountText = remainingBalanceAmount.innerText;
-      const totalRemainingBalanceAmount = parseFloat(remainingBalanceAmountText) + remainingBalance;
-      remainingBalanceAmount.innerText = totalRemainingBalanceAmount;
-    });
+        // Getting Input Value
+        const savingsInput = getInputValue("savings-input");
+        // Error Handling
+        if (isNaN(savingsInput) || savingsInput < 0) {
+          alert("Please enter only positive number!");
+          return;
+        }
+        // Saving Calculation
+        const saving = (incomeAmount * savingsInput) / 100;
+        // Error Handling
+        if (balance < saving) {
+          alert("You don't have enough money!");
+          return;
+        }
+        // Remaining Balance Calculation
+        const remainingBalance = balance - saving;
+        // Update Saving Amount
+        const savingAmount = document.getElementById("saving-amount");
+        const savingAmountText = savingAmount.innerText;
+        const totalSavingAmount = parseFloat(savingAmountText) + saving;
+        savingAmount.innerText = totalSavingAmount;
+        // Update Remaining Balance
+        const remainingBalanceAmount =
+          document.getElementById("remaining-balance");
+        const remainingBalanceAmountText = remainingBalanceAmount.innerText;
+        const totalRemainingBalanceAmount =
+          parseFloat(remainingBalanceAmountText) + remainingBalance;
+        remainingBalanceAmount.innerText = totalRemainingBalanceAmount;
+      });
   });
