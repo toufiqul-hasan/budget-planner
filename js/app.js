@@ -11,9 +11,25 @@ function getInputValue(inputId) {
 document.getElementById("calculate-button").addEventListener("click", function () {
   // Getting Input Values
   const incomeAmount = getInputValue("income-input");
+  // Error Handling
+  if (isNaN(incomeAmount) || incomeAmount < 0) {
+    alert("Please enter only positive number!");
+  }
   const foodCostAmount = getInputValue("food-cost");
+  // Error Handling
+  if (isNaN(foodCostAmount) || foodCostAmount < 0) {
+    alert("Please enter only positive number!");
+  }
   const rentCostAmount = getInputValue("rent-cost");
+  // Error Handling
+  if (isNaN(rentCostAmount) || rentCostAmount < 0) {
+    alert("Please enter only positive number!");
+  }
   const clothesCostAmount = getInputValue("clothes-cost");
+  // Error Handling
+  if (isNaN(clothesCostAmount) || clothesCostAmount < 0) {
+    alert("Please enter only positive number!");
+  }
   // Cost Calculation
   const totalCost = foodCostAmount + rentCostAmount + clothesCostAmount;
   // Balance Calculation
@@ -32,6 +48,10 @@ document.getElementById("calculate-button").addEventListener("click", function (
   document.getElementById("save-button").addEventListener("click", function () {
     // Getting Input Value
     const savingsInput = getInputValue("savings-input");
+    // Error Handling
+    if (isNaN(savingsInput) || savingsInput < 0) {
+      alert("Please enter only positive number!");
+    }
     // Saving Calculation
     const saving = (incomeAmount * savingsInput) / 100;
     // Remaining Balance Calculation
