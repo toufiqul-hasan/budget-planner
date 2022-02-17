@@ -8,16 +8,21 @@ function getInputValue(inputId) {
 }
 
 document.getElementById("calculate-button").addEventListener("click", function () {
+  // Getting Input Values
   const incomeAmount = getInputValue("income-input");
   const foodCostAmount = getInputValue("food-cost");
   const rentCostAmount = getInputValue("rent-cost");
   const clothesCostAmount = getInputValue("clothes-cost");
+  // Total Cost Calculation
   const totalCost = foodCostAmount + rentCostAmount + clothesCostAmount;
+  // Total Balance Calculation
   const balance = incomeAmount - totalCost;
+  // Update Total Balance
   const balanceTotal = document.getElementById("balance");
   const balanceText = balanceTotal.innerText;
   const totalBalance = parseFloat(balanceText) + balance;
   balanceTotal.innerText = totalBalance;
+  // Update Total Expenses
   const expensesTotal = document.getElementById("total-expenses");
   const expensesText = expensesTotal.innerText;
   const totalExpenses = parseFloat(expensesText) + totalCost;
