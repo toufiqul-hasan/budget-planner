@@ -71,3 +71,10 @@ input {
   outline: 0;
   border: 0;
 }
+
+#note {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: red;
+}

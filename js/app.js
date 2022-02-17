@@ -34,6 +34,10 @@ document.getElementById("calculate-button").addEventListener("click", function (
   const totalCost = foodCostAmount + rentCostAmount + clothesCostAmount;
   // Balance Calculation
   const balance = incomeAmount - totalCost;
+  // Error Handling
+  if (incomeAmount < totalCost) {
+    alert("You spend more than you earn!");
+  }
   // Update Total Expenses
   const expensesTotal = document.getElementById("total-expenses");
   const expensesText = expensesTotal.innerText;
@@ -56,6 +60,9 @@ document.getElementById("calculate-button").addEventListener("click", function (
     const saving = (incomeAmount * savingsInput) / 100;
     // Remaining Balance Calculation
     const remainingBalance = balance - saving;
+    if (remainingBalance < saving) {
+      alert("You don't have enough money!");
+    }
     // Update Saving Amount
     const savingAmount = document.getElementById("saving-amount");
     const savingAmountText = savingAmount.innerText;
