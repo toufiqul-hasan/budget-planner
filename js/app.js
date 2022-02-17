@@ -69,11 +69,9 @@ document.getElementById("calculate-button").addEventListener("click", function (
       const totalSavingAmount = parseFloat(savingAmountText) + saving;
       savingAmount.innerText = totalSavingAmount;
       // Update Remaining Balance
-      const remainingBalanceAmount =
-        document.getElementById("remaining-balance");
+      const remainingBalanceAmount = document.getElementById("remaining-balance");
       const remainingBalanceAmountText = remainingBalanceAmount.innerText;
-      const totalRemainingBalanceAmount =
-        parseFloat(remainingBalanceAmountText) + remainingBalance;
+      const totalRemainingBalanceAmount = parseFloat(remainingBalanceAmountText) + remainingBalance;
       remainingBalanceAmount.innerText = totalRemainingBalanceAmount;
     });
   });
