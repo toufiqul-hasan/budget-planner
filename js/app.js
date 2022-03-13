@@ -6,31 +6,34 @@ function getInputValue(inputId) {
   inputField.value = "";
   return amountValue;
 }
-
 // Handle Calculate Button
 document.getElementById("calculate-button").addEventListener("click", function () {
     // Getting Input Values
     const incomeAmount = getInputValue("income-input");
-    // Error Handling
-    if (isNaN(incomeAmount) || incomeAmount < 0) {
+    // Error Handling If Input Type Is Text 
+    /*if (isNaN(incomeAmount) || incomeAmount < 0) {
+      alert("Please enter only positive number!");
+      return;
+    }*/
+    if (incomeAmount < 0) {
       alert("Please enter only positive number!");
       return;
     }
     const foodCostAmount = getInputValue("food-cost");
     // Error Handling
-    if (isNaN(foodCostAmount) || foodCostAmount < 0) {
+    if (foodCostAmount < 0) {
       alert("Please enter only positive number!");
       return;
     }
     const rentCostAmount = getInputValue("rent-cost");
     // Error Handling
-    if (isNaN(rentCostAmount) || rentCostAmount < 0) {
+    if (rentCostAmount < 0) {
       alert("Please enter only positive number!");
       return;
     }
     const clothesCostAmount = getInputValue("clothes-cost");
     // Error Handling
-    if (isNaN(clothesCostAmount) || clothesCostAmount < 0) {
+    if (clothesCostAmount < 0) {
       alert("Please enter only positive number!");
       return;
     }
@@ -58,7 +61,7 @@ document.getElementById("calculate-button").addEventListener("click", function (
         // Getting Input Value
         const savingsInput = getInputValue("savings-input");
         // Error Handling
-        if (isNaN(savingsInput) || savingsInput < 0) {
+        if (savingsInput < 0) {
           alert("Please enter only positive number!");
           return;
         }

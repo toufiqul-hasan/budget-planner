@@ -1,11 +1,11 @@
 /*-------------------------------------------------------------*/
-                        /* FONTS */
+/* FONTS */
 /*-------------------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap");
 
 /*-------------------------------------------------------------*/
-                        /* HEADER */
+/* HEADER */
 /*-------------------------------------------------------------*/
 
 header h1 {
@@ -17,7 +17,7 @@ header h1 {
 }
 
 /*-------------------------------------------------------------*/
-                        /* MAIN */
+/* MAIN */
 /*-------------------------------------------------------------*/
 
 .main-section {
@@ -41,12 +41,24 @@ header h1 {
 }
 
 input {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   outline: 0;
   border: 1px solid #dcdcdc;
   background-color: #dcdcdc;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .save input {
